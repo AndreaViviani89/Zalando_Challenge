@@ -63,7 +63,7 @@ class Network(nn.Module):
         x = F.relu(self.do(self.bn3(self.fc3(x))))  
         x = F.relu(self.do(self.bn4(self.fc4(x))))  
         x = self.out(x)
-        x = F.softmax(x, dim=1)
+        x = F.log_softmax(x, dim=1)
         return x
 
 model2 = Network()

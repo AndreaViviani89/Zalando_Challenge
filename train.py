@@ -12,8 +12,8 @@ import torch.nn.functional as F
 trainset, trainloader, testset, testloader = data_loader()
 
 
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model2.parameters(), lr=0.003)
+criterion = nn.NLLLoss()
+optimizer = optim.Adam(model2.parameters(), lr=0.003)
 
 epochs = 30
 train = []
@@ -81,3 +81,5 @@ plt.plot(train, label='train loss')
 plt.plot(test, label='test loss')
 plt.legend()
 plt.show()
+
+torch.save(model2.state_dict(), 'full_model.pth')
