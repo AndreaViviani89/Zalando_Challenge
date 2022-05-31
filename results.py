@@ -99,7 +99,7 @@ Epoch: 30/30
 Accuracy = 81.95999908447266
 Training time: 1572.0532956123352'''
 
-
+# second try with model2 - we set NLLL and Adam, Log_softmax
 '''Epoch: 1/30
 Accuracy = 83.56999969482422
 Epoch: 2/30
