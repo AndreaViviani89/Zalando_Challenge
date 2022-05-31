@@ -1,0 +1,100 @@
+# first try with model
+'''Epoch: 1/30
+Accuracy = 60.779998779296875
+Epoch: 2/30
+Accuracy = 59.27000045776367
+Epoch: 3/30
+Accuracy = 62.560001373291016
+Epoch: 4/30
+Accuracy = 68.8499984741211
+Epoch: 5/30
+Accuracy = 73.62000274658203
+Epoch: 6/30
+Accuracy = 76.58999633789062
+Epoch: 7/30
+Accuracy = 78.20999908447266
+Epoch: 8/30
+Accuracy = 79.01000213623047
+Epoch: 9/30
+Accuracy = 79.6500015258789
+Epoch: 10/30
+Accuracy = 79.83000183105469
+Epoch: 11/30
+Accuracy = 80.11000061035156
+Epoch: 12/30
+Accuracy = 80.52999877929688
+Epoch: 13/30
+Accuracy = 82.11000061035156
+Epoch: 27/30
+Accuracy = 82.16000366210938
+Epoch: 28/30
+Accuracy = 82.20999908447266
+Epoch: 29/30
+Accuracy = 82.2699966430664
+Epoch: 30/30
+Accuracy = 82.2300033569336
+Training time: 1011.6342613697052'''
+
+
+# first try with model2
+'''Epoch: 1/30
+Accuracy = 60.63999938964844
+Epoch: 2/30
+Accuracy = 62.81999969482422
+Epoch: 3/30
+Accuracy = 65.23999786376953
+Epoch: 4/30
+Accuracy = 68.12999725341797
+Epoch: 5/30
+Accuracy = 71.20999908447266
+Epoch: 6/30
+Accuracy = 72.73999786376953
+Epoch: 7/30
+Accuracy = 74.29000091552734
+Epoch: 8/30
+Accuracy = 75.05999755859375
+Epoch: 9/30
+Accuracy = 76.01000213623047
+Epoch: 10/30
+Accuracy = 77.58000183105469
+Epoch: 11/30
+Accuracy = 78.75
+Epoch: 12/30
+Accuracy = 79.33999633789062
+Epoch: 13/30
+Accuracy = 79.87999725341797
+Epoch: 14/30
+Accuracy = 80.18000030517578
+Epoch: 15/30
+Accuracy = 80.44000244140625
+Epoch: 16/30
+Accuracy = 80.58000183105469
+Epoch: 17/30
+Accuracy = 80.7699966430664
+Epoch: 18/30
+Accuracy = 80.83000183105469
+Epoch: 19/30
+Accuracy = 81.02999877929688
+Epoch: 20/30
+Accuracy = 81.06999969482422
+Epoch: 21/30
+Accuracy = 81.18000030517578
+Epoch: 22/30
+Accuracy = 81.4000015258789
+Epoch: 23/30
+Accuracy = 81.54000091552734
+Epoch: 24/30
+Accuracy = 81.55999755859375
+Epoch: 25/30
+Accuracy = 81.6500015258789
+Epoch: 26/30
+Accuracy = 81.83000183105469
+Epoch: 27/30
+Accuracy = 81.83999633789062
+Epoch: 28/30
+Accuracy = 81.83000183105469
+Epoch: 29/30
+Accuracy = 81.87999725341797
+Epoch: 30/30
+Accuracy = 81.95999908447266
+Training time: 1572.0532956123352'''
