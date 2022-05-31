@@ -15,7 +15,7 @@ trainset, trainloader, testset, testloader = data_loader()
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(model2.parameters(), lr=0.001)
 
-epochs = 30
+epochs = 30 # at least 100 
 train = []
 test = []
 start_time = time.time()
@@ -26,7 +26,7 @@ for epoch in range(epochs):
     if (epoch+1) % 10 == 0:
         torch.save(model2.state_dict(), f'checkpoint_{epoch+1}.pth')
 
-    #set running variables
+    #running variables
     running_loss = 0
     running_loss_test = 0
     incorrect = []
@@ -35,7 +35,7 @@ for epoch in range(epochs):
 
     model2.train()
     for i, (images, labels) in enumerate(iter(trainloader)):
-        # images, labels = images.to(device), labels.to(device)
+        # images, labels = images.to(device), labels.to(device)             --> need to add cuda
         images.resize_(images.size()[0], 784)
 
         optimizer.zero_grad()
@@ -56,13 +56,13 @@ for epoch in range(epochs):
             test_probs = model2.forward(images_test)
             test_loss = criterion(test_probs, labels_test)
 
-            #Check incorrect:
+            #Check the incorrect:
             pred_test = torch.argmax(test_probs, dim=1)
             incorrect_pred = ((pred_test == labels_test) == False).nonzero()
             running_loss_test += test_loss.item()
             incorrect.append(images_test[incorrect_pred].numpy())
 
-            #Check correct for accuracy:
+            #Check the accuracy:
             correct += (pred_test == labels_test).float().sum()
 
     #Accuracy
@@ -84,6 +84,28 @@ plt.show()
 
 # torch.save(model2.state_dict(), 'full_model.pth')
 
+def imshow(image, ax=None, title=None, normalize=True):
+    """Imshow for Tensor."""
+    if ax is None:
+        fig, ax = plt.subplots()
+    image = image.numpy().transpose((1, 2, 0))
+
+    if normalize:
+        mean = np.array([0.485, 0.456, 0.406])
+        std = np.array([0.229, 0.224, 0.225])
+        image = std * image + mean
+        image = np.clip(image, 0, 1)
+
+    ax.imshow(image)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.tick_params(axis='both', length=0)
+    ax.set_xticklabels('')
+    ax.set_yticklabels('')
+
+    return ax
 
 def view_classify(img, ps, version="MNIST"):
     ''' Function for viewing an image and it's predicted classes.
@@ -120,8 +142,9 @@ def view_classify(img, ps, version="MNIST"):
 dataiter = iter(testloader)
 images, labels = dataiter.next()
 img = images[1]
+# model3 = torch.load('full_model.pth')
 
-ps = model2(img) # ps stands for probabilities: your model should return values between 0 and 1
+ps = torch.exp(model2(img)) # ps stands for probabilities: your model should return values between 0 and 1
 # that sums to 1. A softmax does this job!
 
 # Plot the image and probabilities
