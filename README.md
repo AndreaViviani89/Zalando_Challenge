@@ -15,9 +15,9 @@ Automatic classification of clothes from a picture.
 4. 12:45-13:00 - General meeting for checking any blockers and sharing the progress
 5. 13:00-13:45 – Lunch break
 6. 13:45-14:00 – General recap
-7. 14:00-16:00
-   1. Ritthuja & Andrea: Working on the train and improving the accuracy of the model
+7. 14:00-17:00
+   1. Ritthuja: Working on the streamlit app
    2. Omolara: Working on CLI file
-
-17:00 – Presentation time
+   3. Andrea: Working on the train and improving the accuracy of the model
+8. 17:00 – Presentation time
 
